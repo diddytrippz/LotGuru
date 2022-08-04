@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>288897452379-ojj6pm0s2ulhu6dhmvpl9u2hcc30d8lm.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.288897452379-ojj6pm0s2ulhu6dhmvpl9u2hcc30d8lm</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>288897452379-51t61f88phm9sb0jb2i6fn1rm6hl4lv7.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyARWwPydhVmHMVr_6pQWA6RAaovMTHfwGc</string>
+	<key>GCM_SENDER_ID</key>
+	<string>288897452379</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.lotgurus.app</string>
+	<key>PROJECT_ID</key>
+	<string>lotgurusapp</string>
+	<key>STORAGE_BUCKET</key>
+	<string>lotgurusapp.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:288897452379:ios:384685fd4ebd4ce3b4727e</string>
+</dict>
+</plist>
