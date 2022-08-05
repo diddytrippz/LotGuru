@@ -613,7 +613,12 @@ class _SwapRequestInfo2WidgetState extends State<SwapRequestInfo2Widget> {
                 ),
               ),
             ),
-            BottomNavWidget(),
+            BottomNavWidget(
+              search: FlutterFlowTheme.of(context).customTransp,
+              queue: FlutterFlowTheme.of(context).customTransp,
+              add: FlutterFlowTheme.of(context).customTransp,
+              profile: FlutterFlowTheme.of(context).customTransp,
+            ),
           ],
         ),
       ),

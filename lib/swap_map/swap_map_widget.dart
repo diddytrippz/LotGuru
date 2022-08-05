@@ -304,7 +304,12 @@ class _SwapMapWidgetState extends State<SwapMapWidget> {
                     ],
                   ),
                 ),
-                BottomNavWidget(),
+                BottomNavWidget(
+                  search: Colors.transparent,
+                  queue: Colors.transparent,
+                  add: Colors.transparent,
+                  profile: Colors.transparent,
+                ),
               ],
             ),
           ],

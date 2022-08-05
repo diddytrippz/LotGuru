@@ -10,7 +10,18 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class BottomNavWidget extends StatefulWidget {
-  const BottomNavWidget({Key? key}) : super(key: key);
+  const BottomNavWidget({
+    Key? key,
+    this.search,
+    this.queue,
+    this.add,
+    this.profile,
+  }) : super(key: key);
+
+  final Color? search;
+  final Color? queue;
+  final Color? add;
+  final Color? profile;
 
   @override
   _BottomNavWidgetState createState() => _BottomNavWidgetState();
@@ -28,7 +39,7 @@ class _BottomNavWidgetState extends State<BottomNavWidget> {
           width: MediaQuery.of(context).size.width,
           height: 80,
           decoration: BoxDecoration(
-            color: Color(0xFF9A0509),
+            color: Color(0xFFFF0000),
             borderRadius: BorderRadius.only(
               bottomLeft: Radius.circular(0),
               bottomRight: Radius.circular(0),
@@ -36,13 +47,23 @@ class _BottomNavWidgetState extends State<BottomNavWidget> {
               topRight: Radius.circular(55),
             ),
           ),
-          child: Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(20, 0, 20, 0),
-            child: Row(
-              mainAxisSize: MainAxisSize.max,
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                Expanded(
+          child: Row(
+            mainAxisSize: MainAxisSize.max,
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              Expanded(
+                child: Container(
+                  width: 100,
+                  height: 100,
+                  decoration: BoxDecoration(
+                    color: widget.search,
+                    borderRadius: BorderRadius.only(
+                      bottomLeft: Radius.circular(0),
+                      bottomRight: Radius.circular(0),
+                      topLeft: Radius.circular(55),
+                      topRight: Radius.circular(0),
+                    ),
+                  ),
                   child: Padding(
                     padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 10),
                     child: InkWell(
@@ -59,27 +80,34 @@ class _BottomNavWidgetState extends State<BottomNavWidget> {
                       },
                       child: Column(
                         mainAxisSize: MainAxisSize.max,
+                        mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Expanded(
-                            child: Icon(
-                              Icons.search_rounded,
-                              color: Colors.white,
-                              size: 26,
+                            child: Align(
+                              alignment: AlignmentDirectional(0, 0),
+                              child: Icon(
+                                Icons.search_rounded,
+                                color: Colors.white,
+                                size: 28,
+                              ),
                             ),
                           ),
                           Expanded(
-                            child: Padding(
-                              padding:
-                                  EdgeInsetsDirectional.fromSTEB(0, 5, 0, 0),
-                              child: Text(
-                                'Search',
-                                style: FlutterFlowTheme.of(context)
-                                    .bodyText1
-                                    .override(
-                                      fontFamily: 'PT Sans',
-                                      color: Colors.white,
-                                      fontSize: 15,
-                                    ),
+                            child: Align(
+                              alignment: AlignmentDirectional(0, 0),
+                              child: Padding(
+                                padding:
+                                    EdgeInsetsDirectional.fromSTEB(0, 5, 0, 0),
+                                child: Text(
+                                  'Search',
+                                  style: FlutterFlowTheme.of(context)
+                                      .bodyText1
+                                      .override(
+                                        fontFamily: 'PT Sans',
+                                        color: Colors.white,
+                                        fontSize: 15,
+                                      ),
+                                ),
                               ),
                             ),
                           ),
@@ -88,7 +116,14 @@ class _BottomNavWidgetState extends State<BottomNavWidget> {
                     ),
                   ),
                 ),
-                Expanded(
+              ),
+              Expanded(
+                child: Container(
+                  width: 100,
+                  height: 100,
+                  decoration: BoxDecoration(
+                    color: widget.queue,
+                  ),
                   child: Padding(
                     padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 10),
                     child: InkWell(
@@ -107,25 +142,31 @@ class _BottomNavWidgetState extends State<BottomNavWidget> {
                         mainAxisSize: MainAxisSize.max,
                         children: [
                           Expanded(
-                            child: Icon(
-                              Icons.format_list_bulleted,
-                              color: Colors.white,
-                              size: 24,
+                            child: Align(
+                              alignment: AlignmentDirectional(0, 0),
+                              child: Icon(
+                                Icons.format_list_bulleted,
+                                color: Colors.white,
+                                size: 24,
+                              ),
                             ),
                           ),
                           Expanded(
-                            child: Padding(
-                              padding:
-                                  EdgeInsetsDirectional.fromSTEB(0, 5, 0, 0),
-                              child: Text(
-                                'Queue',
-                                style: FlutterFlowTheme.of(context)
-                                    .bodyText1
-                                    .override(
-                                      fontFamily: 'PT Sans',
-                                      color: Colors.white,
-                                      fontSize: 15,
-                                    ),
+                            child: Align(
+                              alignment: AlignmentDirectional(0, 0),
+                              child: Padding(
+                                padding:
+                                    EdgeInsetsDirectional.fromSTEB(0, 5, 0, 0),
+                                child: Text(
+                                  'Queue',
+                                  style: FlutterFlowTheme.of(context)
+                                      .bodyText1
+                                      .override(
+                                        fontFamily: 'PT Sans',
+                                        color: Colors.white,
+                                        fontSize: 15,
+                                      ),
+                                ),
                               ),
                             ),
                           ),
@@ -134,7 +175,14 @@ class _BottomNavWidgetState extends State<BottomNavWidget> {
                     ),
                   ),
                 ),
-                Expanded(
+              ),
+              Expanded(
+                child: Container(
+                  width: 100,
+                  height: 100,
+                  decoration: BoxDecoration(
+                    color: widget.add,
+                  ),
                   child: Padding(
                     padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 10),
                     child: InkWell(
@@ -169,25 +217,31 @@ class _BottomNavWidgetState extends State<BottomNavWidget> {
                         mainAxisSize: MainAxisSize.max,
                         children: [
                           Expanded(
-                            child: Icon(
-                              Icons.add,
-                              color: Colors.white,
-                              size: 30,
+                            child: Align(
+                              alignment: AlignmentDirectional(0, 0),
+                              child: Icon(
+                                Icons.add,
+                                color: Colors.white,
+                                size: 30,
+                              ),
                             ),
                           ),
                           Expanded(
-                            child: Padding(
-                              padding:
-                                  EdgeInsetsDirectional.fromSTEB(0, 5, 0, 0),
-                              child: Text(
-                                'Add',
-                                style: FlutterFlowTheme.of(context)
-                                    .bodyText1
-                                    .override(
-                                      fontFamily: 'PT Sans',
-                                      color: Colors.white,
-                                      fontSize: 15,
-                                    ),
+                            child: Align(
+                              alignment: AlignmentDirectional(0, 0),
+                              child: Padding(
+                                padding:
+                                    EdgeInsetsDirectional.fromSTEB(0, 5, 0, 0),
+                                child: Text(
+                                  'Add',
+                                  style: FlutterFlowTheme.of(context)
+                                      .bodyText1
+                                      .override(
+                                        fontFamily: 'PT Sans',
+                                        color: Colors.white,
+                                        fontSize: 15,
+                                      ),
+                                ),
                               ),
                             ),
                           ),
@@ -196,7 +250,20 @@ class _BottomNavWidgetState extends State<BottomNavWidget> {
                     ),
                   ),
                 ),
-                Expanded(
+              ),
+              Expanded(
+                child: Container(
+                  width: 100,
+                  height: 100,
+                  decoration: BoxDecoration(
+                    color: widget.profile,
+                    borderRadius: BorderRadius.only(
+                      bottomLeft: Radius.circular(0),
+                      bottomRight: Radius.circular(0),
+                      topLeft: Radius.circular(0),
+                      topRight: Radius.circular(55),
+                    ),
+                  ),
                   child: Padding(
                     padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 10),
                     child: InkWell(
@@ -218,25 +285,31 @@ class _BottomNavWidgetState extends State<BottomNavWidget> {
                         mainAxisSize: MainAxisSize.max,
                         children: [
                           Expanded(
-                            child: Icon(
-                              FFIcons.kuser1,
-                              color: Colors.white,
-                              size: 22,
+                            child: Align(
+                              alignment: AlignmentDirectional(0, 0),
+                              child: Icon(
+                                FFIcons.kuser1,
+                                color: Colors.white,
+                                size: 22,
+                              ),
                             ),
                           ),
                           Expanded(
-                            child: Padding(
-                              padding:
-                                  EdgeInsetsDirectional.fromSTEB(0, 5, 0, 0),
-                              child: Text(
-                                'Profile',
-                                style: FlutterFlowTheme.of(context)
-                                    .bodyText1
-                                    .override(
-                                      fontFamily: 'PT Sans',
-                                      color: Colors.white,
-                                      fontSize: 15,
-                                    ),
+                            child: Align(
+                              alignment: AlignmentDirectional(0, 0),
+                              child: Padding(
+                                padding:
+                                    EdgeInsetsDirectional.fromSTEB(0, 5, 0, 0),
+                                child: Text(
+                                  'Profile',
+                                  style: FlutterFlowTheme.of(context)
+                                      .bodyText1
+                                      .override(
+                                        fontFamily: 'PT Sans',
+                                        color: Colors.white,
+                                        fontSize: 15,
+                                      ),
+                                ),
                               ),
                             ),
                           ),
@@ -245,8 +318,8 @@ class _BottomNavWidgetState extends State<BottomNavWidget> {
                     ),
                   ),
                 ),
-              ],
-            ),
+              ),
+            ],
           ),
         ),
       ],

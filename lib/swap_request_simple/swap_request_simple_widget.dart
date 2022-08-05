@@ -193,7 +193,12 @@ class _SwapRequestSimpleWidgetState extends State<SwapRequestSimpleWidget> {
                   ),
                 ],
               ),
-              BottomNavWidget(),
+              BottomNavWidget(
+                search: FlutterFlowTheme.of(context).customTransp,
+                queue: FlutterFlowTheme.of(context).customTransp,
+                add: FlutterFlowTheme.of(context).customTransp,
+                profile: FlutterFlowTheme.of(context).customTransp,
+              ),
             ],
           ),
         ),

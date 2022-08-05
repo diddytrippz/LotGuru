@@ -870,7 +870,12 @@ class _SingleDropInfoWidgetState extends State<SingleDropInfoWidget> {
                 ),
               ),
             ),
-            BottomNavWidget(),
+            BottomNavWidget(
+              search: Colors.transparent,
+              queue: Colors.transparent,
+              add: Colors.transparent,
+              profile: Colors.transparent,
+            ),
           ],
         ),
       ),

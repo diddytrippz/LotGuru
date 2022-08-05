@@ -48,143 +48,139 @@ class _LoginSignUpWidgetState extends State<LoginSignUpWidget> {
             ),
           ),
           child: Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(0, 60, 0, 0),
-            child: SingleChildScrollView(
-              child: Column(
-                mainAxisSize: MainAxisSize.max,
-                children: [
-                  Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(0, 112, 0, 0),
-                    child: Column(
-                      mainAxisSize: MainAxisSize.max,
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(25, 0, 25, 0),
-                          child: Image.asset(
-                            'assets/images/58a8b5d52bf81df316ce8f245288b756.png',
-                            fit: BoxFit.cover,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                  Column(
+            padding: EdgeInsetsDirectional.fromSTEB(0, 40, 0, 80),
+            child: Column(
+              mainAxisSize: MainAxisSize.max,
+              children: [
+                Expanded(
+                  child: Column(
                     mainAxisSize: MainAxisSize.max,
+                    mainAxisAlignment: MainAxisAlignment.end,
                     children: [
                       Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(0, 45, 0, 0),
-                        child: Text(
-                          'Welcome!',
-                          style:
-                              FlutterFlowTheme.of(context).bodyText1.override(
-                                    fontFamily: 'PT Sans',
-                                    fontSize: 27,
-                                    fontWeight: FontWeight.bold,
-                                  ),
+                        padding: EdgeInsetsDirectional.fromSTEB(25, 0, 25, 0),
+                        child: Image.asset(
+                          'assets/images/58a8b5d52bf81df316ce8f245288b756.png',
+                          fit: BoxFit.cover,
                         ),
                       ),
-                      Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(0, 8, 0, 14),
-                        child: Text(
-                          'Login or sign up below',
-                          style:
-                              FlutterFlowTheme.of(context).bodyText1.override(
-                                    fontFamily: 'PT Sans',
-                                    fontSize: 16,
-                                  ),
-                        ),
+                    ],
+                  ),
+                ),
+                Column(
+                  mainAxisSize: MainAxisSize.min,
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Padding(
+                      padding: EdgeInsetsDirectional.fromSTEB(0, 45, 0, 0),
+                      child: Text(
+                        'Welcome!',
+                        style: FlutterFlowTheme.of(context).bodyText1.override(
+                              fontFamily: 'PT Sans',
+                              fontSize: 27,
+                              fontWeight: FontWeight.bold,
+                            ),
                       ),
-                      Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(40, 0, 40, 0),
-                        child: TextFormField(
-                          controller: emailTextController,
-                          obscureText: false,
-                          decoration: InputDecoration(
-                            hintText: 'Email',
-                            enabledBorder: OutlineInputBorder(
-                              borderSide: BorderSide(
-                                color: Colors.black,
-                                width: 1,
-                              ),
-                              borderRadius: BorderRadius.circular(6),
+                    ),
+                    Padding(
+                      padding: EdgeInsetsDirectional.fromSTEB(0, 8, 0, 14),
+                      child: Text(
+                        'Login or sign up below',
+                        style: FlutterFlowTheme.of(context).bodyText1.override(
+                              fontFamily: 'PT Sans',
+                              fontSize: 16,
                             ),
-                            focusedBorder: OutlineInputBorder(
-                              borderSide: BorderSide(
-                                color: Colors.black,
-                                width: 1,
-                              ),
-                              borderRadius: BorderRadius.circular(6),
+                      ),
+                    ),
+                    Padding(
+                      padding: EdgeInsetsDirectional.fromSTEB(40, 0, 40, 0),
+                      child: TextFormField(
+                        controller: emailTextController,
+                        obscureText: false,
+                        decoration: InputDecoration(
+                          hintText: 'Email',
+                          enabledBorder: OutlineInputBorder(
+                            borderSide: BorderSide(
+                              color: Colors.black,
+                              width: 1,
                             ),
-                            filled: true,
-                            fillColor: Colors.white,
-                            contentPadding:
-                                EdgeInsetsDirectional.fromSTEB(14, 22, 0, 22),
+                            borderRadius: BorderRadius.circular(6),
                           ),
-                          style:
-                              FlutterFlowTheme.of(context).bodyText1.override(
-                                    fontFamily: 'PT Sans',
-                                    fontSize: 16,
-                                  ),
+                          focusedBorder: OutlineInputBorder(
+                            borderSide: BorderSide(
+                              color: Colors.black,
+                              width: 1,
+                            ),
+                            borderRadius: BorderRadius.circular(6),
+                          ),
+                          filled: true,
+                          fillColor: Colors.white,
+                          contentPadding:
+                              EdgeInsetsDirectional.fromSTEB(14, 22, 0, 22),
                         ),
+                        style: FlutterFlowTheme.of(context).bodyText1.override(
+                              fontFamily: 'PT Sans',
+                              fontSize: 16,
+                            ),
+                        keyboardType: TextInputType.emailAddress,
                       ),
-                      Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(40, 9, 40, 0),
-                        child: TextFormField(
-                          controller: passwordFieldController,
-                          obscureText: !passwordFieldVisibility,
-                          decoration: InputDecoration(
-                            hintText: 'Password',
-                            enabledBorder: OutlineInputBorder(
-                              borderSide: BorderSide(
-                                color: Colors.black,
-                                width: 1,
-                              ),
-                              borderRadius: BorderRadius.circular(6),
+                    ),
+                    Padding(
+                      padding: EdgeInsetsDirectional.fromSTEB(40, 9, 40, 0),
+                      child: TextFormField(
+                        controller: passwordFieldController,
+                        obscureText: !passwordFieldVisibility,
+                        decoration: InputDecoration(
+                          hintText: 'Password',
+                          enabledBorder: OutlineInputBorder(
+                            borderSide: BorderSide(
+                              color: Colors.black,
+                              width: 1,
                             ),
-                            focusedBorder: OutlineInputBorder(
-                              borderSide: BorderSide(
-                                color: Colors.black,
-                                width: 1,
-                              ),
-                              borderRadius: BorderRadius.circular(6),
+                            borderRadius: BorderRadius.circular(6),
+                          ),
+                          focusedBorder: OutlineInputBorder(
+                            borderSide: BorderSide(
+                              color: Colors.black,
+                              width: 1,
                             ),
-                            filled: true,
-                            fillColor: Colors.white,
-                            contentPadding:
-                                EdgeInsetsDirectional.fromSTEB(14, 22, 0, 22),
-                            suffixIcon: InkWell(
-                              onTap: () => setState(
-                                () => passwordFieldVisibility =
-                                    !passwordFieldVisibility,
-                              ),
-                              focusNode: FocusNode(skipTraversal: true),
-                              child: Icon(
-                                passwordFieldVisibility
-                                    ? Icons.visibility_outlined
-                                    : Icons.visibility_off_outlined,
-                                color: Color(0xFF757575),
-                                size: 16,
-                              ),
+                            borderRadius: BorderRadius.circular(6),
+                          ),
+                          filled: true,
+                          fillColor: Colors.white,
+                          contentPadding:
+                              EdgeInsetsDirectional.fromSTEB(14, 22, 0, 22),
+                          suffixIcon: InkWell(
+                            onTap: () => setState(
+                              () => passwordFieldVisibility =
+                                  !passwordFieldVisibility,
+                            ),
+                            focusNode: FocusNode(skipTraversal: true),
+                            child: Icon(
+                              passwordFieldVisibility
+                                  ? Icons.visibility_outlined
+                                  : Icons.visibility_off_outlined,
+                              color: Color(0xFF757575),
+                              size: 16,
                             ),
                           ),
-                          style:
-                              FlutterFlowTheme.of(context).bodyText1.override(
-                                    fontFamily: 'PT Sans',
-                                    fontSize: 16,
-                                  ),
                         ),
+                        style: FlutterFlowTheme.of(context).bodyText1.override(
+                              fontFamily: 'PT Sans',
+                              fontSize: 16,
+                            ),
                       ),
-                      Align(
-                        alignment: AlignmentDirectional(0, 0),
-                        child: Padding(
-                          padding:
-                              EdgeInsetsDirectional.fromSTEB(40, 21, 40, 22),
-                          child: Row(
-                            mainAxisSize: MainAxisSize.max,
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              InkWell(
+                    ),
+                    Align(
+                      alignment: AlignmentDirectional(0, 0),
+                      child: Padding(
+                        padding: EdgeInsetsDirectional.fromSTEB(40, 21, 40, 22),
+                        child: Row(
+                          mainAxisSize: MainAxisSize.min,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Expanded(
+                              child: InkWell(
                                 onTap: () async {
                                   final user = await signInWithEmail(
                                     context,
@@ -239,7 +235,9 @@ class _LoginSignUpWidgetState extends State<LoginSignUpWidget> {
                                   ),
                                 ),
                               ),
-                              Padding(
+                            ),
+                            Expanded(
+                              child: Padding(
                                 padding:
                                     EdgeInsetsDirectional.fromSTEB(14, 0, 0, 0),
                                 child: InkWell(
@@ -279,60 +277,59 @@ class _LoginSignUpWidgetState extends State<LoginSignUpWidget> {
                                   ),
                                 ),
                               ),
-                            ],
-                          ),
-                        ),
-                      ),
-                      Align(
-                        alignment: AlignmentDirectional(0, 0),
-                        child: Row(
-                          mainAxisSize: MainAxisSize.max,
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Padding(
-                              padding:
-                                  EdgeInsetsDirectional.fromSTEB(0, 0, 8, 0),
-                              child: Text(
-                                'Forgot Password?',
-                                style: FlutterFlowTheme.of(context)
-                                    .bodyText1
-                                    .override(
-                                      fontFamily: 'PT Sans',
-                                      fontSize: 18,
-                                    ),
-                              ),
-                            ),
-                            InkWell(
-                              onTap: () async {
-                                await Navigator.push(
-                                  context,
-                                  PageTransition(
-                                    type: PageTransitionType.fade,
-                                    duration: Duration(milliseconds: 0),
-                                    reverseDuration: Duration(milliseconds: 0),
-                                    child: ResetPasswordWidget(),
-                                  ),
-                                );
-                              },
-                              child: Text(
-                                'Reset.',
-                                style: FlutterFlowTheme.of(context)
-                                    .bodyText1
-                                    .override(
-                                      fontFamily: 'PT Sans',
-                                      color: Color(0xFF9A0509),
-                                      fontSize: 18,
-                                      decoration: TextDecoration.underline,
-                                    ),
-                              ),
                             ),
                           ],
                         ),
                       ),
-                    ],
-                  ),
-                ],
-              ),
+                    ),
+                    Align(
+                      alignment: AlignmentDirectional(0, 0),
+                      child: Row(
+                        mainAxisSize: MainAxisSize.max,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Padding(
+                            padding: EdgeInsetsDirectional.fromSTEB(0, 0, 8, 0),
+                            child: Text(
+                              'Forgot Password?',
+                              style: FlutterFlowTheme.of(context)
+                                  .bodyText1
+                                  .override(
+                                    fontFamily: 'PT Sans',
+                                    fontSize: 18,
+                                  ),
+                            ),
+                          ),
+                          InkWell(
+                            onTap: () async {
+                              await Navigator.push(
+                                context,
+                                PageTransition(
+                                  type: PageTransitionType.fade,
+                                  duration: Duration(milliseconds: 0),
+                                  reverseDuration: Duration(milliseconds: 0),
+                                  child: ResetPasswordWidget(),
+                                ),
+                              );
+                            },
+                            child: Text(
+                              'Reset.',
+                              style: FlutterFlowTheme.of(context)
+                                  .bodyText1
+                                  .override(
+                                    fontFamily: 'PT Sans',
+                                    color: Color(0xFF9A0509),
+                                    fontSize: 18,
+                                    decoration: TextDecoration.underline,
+                                  ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ],
             ),
           ),
         ),

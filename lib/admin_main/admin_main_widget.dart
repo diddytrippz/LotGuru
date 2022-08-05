@@ -349,7 +349,12 @@ class _AdminMainWidgetState extends State<AdminMainWidget> {
                   ],
                 ),
               ),
-              BottomNavAdminWidget(),
+              BottomNavAdminWidget(
+                search: FlutterFlowTheme.of(context).customTransp,
+                queue: FlutterFlowTheme.of(context).customTransp,
+                add: FlutterFlowTheme.of(context).customTransp,
+                profile: FlutterFlowTheme.of(context).customTransp,
+              ),
             ],
           ),
         ),

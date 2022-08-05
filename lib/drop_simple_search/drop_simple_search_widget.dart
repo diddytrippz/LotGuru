@@ -264,14 +264,46 @@ class _DropSimpleSearchWidgetState extends State<DropSimpleSearchWidget> {
                     children: [
                       Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(0, 100, 0, 0),
-                        child: Text(
-                          'Search Results',
-                          style:
-                              FlutterFlowTheme.of(context).bodyText1.override(
-                                    fontFamily: 'PT Sans',
-                                    color: Color(0xFF9A0509),
-                                    fontSize: 29,
+                        child: Row(
+                          mainAxisSize: MainAxisSize.min,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Align(
+                              alignment: AlignmentDirectional(0, 0),
+                              child: Padding(
+                                padding:
+                                    EdgeInsetsDirectional.fromSTEB(0, 0, 5, 0),
+                                child: InkWell(
+                                  onTap: () async {
+                                    Navigator.pop(context);
+                                  },
+                                  child: Text(
+                                    '<',
+                                    style: FlutterFlowTheme.of(context)
+                                        .bodyText1
+                                        .override(
+                                          fontFamily: 'PT Sans',
+                                          color: Color(0xFF868788),
+                                          fontSize: 35,
+                                        ),
                                   ),
+                                ),
+                              ),
+                            ),
+                            Align(
+                              alignment: AlignmentDirectional(0, 0),
+                              child: Text(
+                                'Search Results',
+                                style: FlutterFlowTheme.of(context)
+                                    .bodyText1
+                                    .override(
+                                      fontFamily: 'PT Sans',
+                                      color: Color(0xFF9A0509),
+                                      fontSize: 29,
+                                    ),
+                              ),
+                            ),
+                          ],
                         ),
                       ),
                       Padding(
@@ -623,7 +655,12 @@ class _DropSimpleSearchWidgetState extends State<DropSimpleSearchWidget> {
                     ],
                   ),
                 ),
-              BottomNavWidget(),
+              BottomNavWidget(
+                search: Color(0xFFC60000),
+                queue: Colors.transparent,
+                add: Colors.transparent,
+                profile: Colors.transparent,
+              ),
             ],
           ),
         ),

@@ -50,18 +50,47 @@ class _AdminplanAndPaymentWidgetState extends State<AdminplanAndPaymentWidget> {
                           fit: BoxFit.cover,
                         ),
                       ),
-                      Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(0, 5, 0, 0),
-                        child: Text(
-                          'Plan & Payment',
-                          style:
-                              FlutterFlowTheme.of(context).bodyText1.override(
+                      Row(
+                        mainAxisSize: MainAxisSize.max,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Align(
+                            alignment: AlignmentDirectional(0, 0),
+                            child: Padding(
+                              padding:
+                                  EdgeInsetsDirectional.fromSTEB(0, 5, 5, 0),
+                              child: InkWell(
+                                onTap: () async {
+                                  Navigator.pop(context);
+                                },
+                                child: Text(
+                                  '<',
+                                  style: FlutterFlowTheme.of(context)
+                                      .bodyText1
+                                      .override(
+                                        fontFamily: 'PT Sans',
+                                        color: Color(0xFF868788),
+                                        fontSize: 35,
+                                      ),
+                                ),
+                              ),
+                            ),
+                          ),
+                          Padding(
+                            padding: EdgeInsetsDirectional.fromSTEB(0, 5, 0, 0),
+                            child: Text(
+                              'Services',
+                              style: FlutterFlowTheme.of(context)
+                                  .bodyText1
+                                  .override(
                                     fontFamily: 'PT Sans',
                                     color: Color(0xFF9A0509),
                                     fontSize: 27,
                                     fontWeight: FontWeight.normal,
                                   ),
-                        ),
+                            ),
+                          ),
+                        ],
                       ),
                       Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(25, 25, 25, 0),
@@ -525,7 +554,12 @@ class _AdminplanAndPaymentWidgetState extends State<AdminplanAndPaymentWidget> {
                   ),
                 ),
               ),
-              BottomNavAdminWidget(),
+              BottomNavAdminWidget(
+                search: FlutterFlowTheme.of(context).customTransp,
+                queue: FlutterFlowTheme.of(context).customTransp,
+                add: FlutterFlowTheme.of(context).customTransp,
+                profile: FlutterFlowTheme.of(context).customTransp,
+              ),
             ],
           ),
         ),

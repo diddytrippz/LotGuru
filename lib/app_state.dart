@@ -29,6 +29,8 @@ class FFAppState {
   bool showMarker = true;
 
   String inventoryPriority = '';
+
+  String requestLocation2 = '';
 }
 
 LatLng? _latLngFromString(String? val) {

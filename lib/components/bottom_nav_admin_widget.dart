@@ -5,11 +5,21 @@ import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../queue_full/queue_full_widget.dart';
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class BottomNavAdminWidget extends StatefulWidget {
-  const BottomNavAdminWidget({Key? key}) : super(key: key);
+  const BottomNavAdminWidget({
+    Key? key,
+    this.search,
+    this.queue,
+    this.add,
+    this.profile,
+  }) : super(key: key);
+
+  final Color? search;
+  final Color? queue;
+  final Color? add;
+  final Color? profile;
 
   @override
   _BottomNavAdminWidgetState createState() => _BottomNavAdminWidgetState();
@@ -35,13 +45,23 @@ class _BottomNavAdminWidgetState extends State<BottomNavAdminWidget> {
               topRight: Radius.circular(55),
             ),
           ),
-          child: Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(20, 0, 20, 0),
-            child: Row(
-              mainAxisSize: MainAxisSize.max,
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                Expanded(
+          child: Row(
+            mainAxisSize: MainAxisSize.max,
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              Expanded(
+                child: Container(
+                  width: 100,
+                  height: 100,
+                  decoration: BoxDecoration(
+                    color: widget.search,
+                    borderRadius: BorderRadius.only(
+                      bottomLeft: Radius.circular(0),
+                      bottomRight: Radius.circular(0),
+                      topLeft: Radius.circular(55),
+                      topRight: Radius.circular(0),
+                    ),
+                  ),
                   child: Padding(
                     padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 10),
                     child: InkWell(
@@ -85,7 +105,14 @@ class _BottomNavAdminWidgetState extends State<BottomNavAdminWidget> {
                     ),
                   ),
                 ),
-                Expanded(
+              ),
+              Expanded(
+                child: Container(
+                  width: 100,
+                  height: 100,
+                  decoration: BoxDecoration(
+                    color: widget.queue,
+                  ),
                   child: Padding(
                     padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 10),
                     child: InkWell(
@@ -129,7 +156,14 @@ class _BottomNavAdminWidgetState extends State<BottomNavAdminWidget> {
                     ),
                   ),
                 ),
-                Expanded(
+              ),
+              Expanded(
+                child: Container(
+                  width: 100,
+                  height: 100,
+                  decoration: BoxDecoration(
+                    color: widget.add,
+                  ),
                   child: Padding(
                     padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 10),
                     child: InkWell(
@@ -175,7 +209,20 @@ class _BottomNavAdminWidgetState extends State<BottomNavAdminWidget> {
                     ),
                   ),
                 ),
-                Expanded(
+              ),
+              Expanded(
+                child: Container(
+                  width: 100,
+                  height: 100,
+                  decoration: BoxDecoration(
+                    color: widget.profile,
+                    borderRadius: BorderRadius.only(
+                      bottomLeft: Radius.circular(0),
+                      bottomRight: Radius.circular(0),
+                      topLeft: Radius.circular(0),
+                      topRight: Radius.circular(55),
+                    ),
+                  ),
                   child: Padding(
                     padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 10),
                     child: InkWell(
@@ -197,10 +244,21 @@ class _BottomNavAdminWidgetState extends State<BottomNavAdminWidget> {
                         mainAxisSize: MainAxisSize.max,
                         children: [
                           Expanded(
-                            child: FaIcon(
-                              FontAwesomeIcons.userShield,
-                              color: Colors.white,
-                              size: 19,
+                            child: Row(
+                              mainAxisSize: MainAxisSize.max,
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Icon(
+                                  FFIcons.kuser1,
+                                  color: Colors.white,
+                                  size: 19,
+                                ),
+                                Icon(
+                                  Icons.star_rate,
+                                  color: Colors.white,
+                                  size: 15,
+                                ),
+                              ],
                             ),
                           ),
                           Expanded(
@@ -224,8 +282,8 @@ class _BottomNavAdminWidgetState extends State<BottomNavAdminWidget> {
                     ),
                   ),
                 ),
-              ],
-            ),
+              ),
+            ],
           ),
         ),
       ],

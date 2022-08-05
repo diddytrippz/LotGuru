@@ -155,7 +155,9 @@ class _RequestMoveWidgetState extends State<RequestMoveWidget> {
                               builder: (context) {
                                 return Padding(
                                   padding: MediaQuery.of(context).viewInsets,
-                                  child: RequestMove2Widget(),
+                                  child: RequestMove2Widget(
+                                    requestLocation: dropDownValue,
+                                  ),
                                 );
                               },
                             );

@@ -204,7 +204,6 @@ class _DropadvancedSearchWidgetState extends State<DropadvancedSearchWidget> {
                           width: 280,
                           child: TextFormField(
                             controller: textController,
-                            autofocus: true,
                             obscureText: false,
                             decoration: InputDecoration(
                               hintText: 'Vin#',
@@ -346,7 +345,12 @@ class _DropadvancedSearchWidgetState extends State<DropadvancedSearchWidget> {
                   ),
                 ),
               ),
-              BottomNavWidget(),
+              BottomNavWidget(
+                search: Color(0xFFC60000),
+                queue: Colors.transparent,
+                add: Colors.transparent,
+                profile: Colors.transparent,
+              ),
             ],
           ),
         ),

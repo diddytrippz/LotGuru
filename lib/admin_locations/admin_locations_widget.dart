@@ -89,18 +89,51 @@ class _AdminLocationsWidgetState extends State<AdminLocationsWidget> {
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(0, 120, 0, 40),
-                        child: Text(
-                          'Locations',
-                          style:
-                              FlutterFlowTheme.of(context).bodyText1.override(
-                                    fontFamily: 'PT Sans',
-                                    color: Color(0xFF9A0509),
-                                    fontSize: 27,
-                                    fontWeight: FontWeight.w500,
-                                  ),
-                        ),
+                      Row(
+                        mainAxisSize: MainAxisSize.max,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Align(
+                            alignment: AlignmentDirectional(0, 0),
+                            child: Padding(
+                              padding:
+                                  EdgeInsetsDirectional.fromSTEB(0, 120, 5, 40),
+                              child: InkWell(
+                                onTap: () async {
+                                  Navigator.pop(context);
+                                },
+                                child: Text(
+                                  '<',
+                                  style: FlutterFlowTheme.of(context)
+                                      .bodyText1
+                                      .override(
+                                        fontFamily: 'PT Sans',
+                                        color: Color(0xFF868788),
+                                        fontSize: 35,
+                                      ),
+                                ),
+                              ),
+                            ),
+                          ),
+                          Align(
+                            alignment: AlignmentDirectional(0, 0),
+                            child: Padding(
+                              padding:
+                                  EdgeInsetsDirectional.fromSTEB(0, 120, 0, 40),
+                              child: Text(
+                                'Locations',
+                                style: FlutterFlowTheme.of(context)
+                                    .bodyText1
+                                    .override(
+                                      fontFamily: 'PT Sans',
+                                      color: Color(0xFF9A0509),
+                                      fontSize: 27,
+                                      fontWeight: FontWeight.w500,
+                                    ),
+                              ),
+                            ),
+                          ),
+                        ],
                       ),
                       AuthUserStreamWidget(
                         child: StreamBuilder<List<UsersRecord>>(
@@ -355,7 +388,12 @@ class _AdminLocationsWidgetState extends State<AdminLocationsWidget> {
                   ),
                 ),
               ),
-              BottomNavAdminWidget(),
+              BottomNavAdminWidget(
+                search: FlutterFlowTheme.of(context).customTransp,
+                queue: FlutterFlowTheme.of(context).customTransp,
+                add: FlutterFlowTheme.of(context).customTransp,
+                profile: FlutterFlowTheme.of(context).customTransp,
+              ),
             ],
           ),
         ),

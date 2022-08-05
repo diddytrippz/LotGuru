@@ -317,7 +317,12 @@ class _SingleRequestMapWidgetState extends State<SingleRequestMapWidget> {
                     ],
                   ),
                 ),
-                BottomNavWidget(),
+                BottomNavWidget(
+                  search: FlutterFlowTheme.of(context).customTransp,
+                  queue: FlutterFlowTheme.of(context).customTransp,
+                  add: FlutterFlowTheme.of(context).customTransp,
+                  profile: FlutterFlowTheme.of(context).customTransp,
+                ),
               ],
             ),
             FlutterFlowGoogleMap(

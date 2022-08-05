@@ -21,6 +21,7 @@ abstract class FlutterFlowTheme {
   late Color lineColors;
   late Color primaryBtnText;
   late Color lineColor;
+  late Color customTransp;
 
   String get title1Family => typography.title1Family;
   TextStyle get title1 => typography.title1;
@@ -54,6 +55,7 @@ class LightModeTheme extends FlutterFlowTheme {
   late Color lineColors = Color(0xFFE0E3E7);
   late Color primaryBtnText = Color(0xFF0F1316);
   late Color lineColor = Color(0xFFE0E3E7);
+  late Color customTransp = Color(0x00000000);
 }
 
 abstract class Typography {

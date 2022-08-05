@@ -12,9 +12,11 @@ class RequestMove2Widget extends StatefulWidget {
   const RequestMove2Widget({
     Key? key,
     this.inventoryMove2,
+    this.requestLocation,
   }) : super(key: key);
 
   final InventoryRecord? inventoryMove2;
+  final String? requestLocation;
 
   @override
   _RequestMove2WidgetState createState() => _RequestMove2WidgetState();
@@ -107,9 +109,9 @@ class _RequestMove2WidgetState extends State<RequestMove2Widget> {
                           final dropDownUsersRecord =
                               dropDownUsersRecordList.first;
                           return FlutterFlowDropDown(
-                            options: dropDownUsersRecord.locationLabel!
-                                .toList()
-                                .toList(),
+                            initialOption: dropDownValue ??=
+                                widget.requestLocation,
+                            options: <String>[],
                             onChanged: (val) =>
                                 setState(() => dropDownValue = val),
                             width: MediaQuery.of(context).size.width * 0.55,
@@ -162,15 +164,17 @@ class _RequestMove2WidgetState extends State<RequestMove2Widget> {
                                 mainAxisSize: MainAxisSize.max,
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
-                                  Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        0, 0, 5, 0),
-                                    child: Icon(
-                                      Icons.check_rounded,
-                                      color: Colors.black,
-                                      size: 24,
+                                  if (FFAppState().inventoryPriority ==
+                                      'Urgent')
+                                    Padding(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                          0, 0, 5, 0),
+                                      child: Icon(
+                                        Icons.check_rounded,
+                                        color: Colors.black,
+                                        size: 24,
+                                      ),
                                     ),
-                                  ),
                                   Align(
                                     alignment: AlignmentDirectional(0, 0),
                                     child: Text(
@@ -209,15 +213,16 @@ class _RequestMove2WidgetState extends State<RequestMove2Widget> {
                                 mainAxisSize: MainAxisSize.max,
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
-                                  Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        0, 0, 5, 0),
-                                    child: Icon(
-                                      Icons.check_rounded,
-                                      color: Colors.black,
-                                      size: 24,
+                                  if (FFAppState().inventoryPriority == 'High')
+                                    Padding(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                          0, 0, 5, 0),
+                                      child: Icon(
+                                        Icons.check_rounded,
+                                        color: Colors.black,
+                                        size: 24,
+                                      ),
                                     ),
-                                  ),
                                   Align(
                                     alignment: AlignmentDirectional(0, 0),
                                     child: Text(
@@ -256,15 +261,17 @@ class _RequestMove2WidgetState extends State<RequestMove2Widget> {
                                 mainAxisSize: MainAxisSize.max,
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
-                                  Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        0, 0, 5, 0),
-                                    child: Icon(
-                                      Icons.check_rounded,
-                                      color: Colors.black,
-                                      size: 24,
+                                  if (FFAppState().inventoryPriority ==
+                                      'Normal')
+                                    Padding(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                          0, 0, 5, 0),
+                                      child: Icon(
+                                        Icons.check_rounded,
+                                        color: Colors.black,
+                                        size: 24,
+                                      ),
                                     ),
-                                  ),
                                   Align(
                                     alignment: AlignmentDirectional(0, 0),
                                     child: Text(
@@ -303,15 +310,16 @@ class _RequestMove2WidgetState extends State<RequestMove2Widget> {
                                 mainAxisSize: MainAxisSize.max,
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
-                                  Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        0, 0, 5, 0),
-                                    child: Icon(
-                                      Icons.check_rounded,
-                                      color: Colors.black,
-                                      size: 24,
+                                  if (FFAppState().inventoryPriority == 'Low')
+                                    Padding(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                          0, 0, 5, 0),
+                                      child: Icon(
+                                        Icons.check_rounded,
+                                        color: Colors.black,
+                                        size: 24,
+                                      ),
                                     ),
-                                  ),
                                   Align(
                                     alignment: AlignmentDirectional(0, 0),
                                     child: Text(

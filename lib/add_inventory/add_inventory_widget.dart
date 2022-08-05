@@ -66,18 +66,48 @@ class _AddInventoryWidgetState extends State<AddInventoryWidget> {
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(0, 80, 0, 0),
-                        child: Text(
-                          'Add',
-                          style:
-                              FlutterFlowTheme.of(context).bodyText1.override(
+                      Row(
+                        mainAxisSize: MainAxisSize.max,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Align(
+                            alignment: AlignmentDirectional(0, 0),
+                            child: Padding(
+                              padding:
+                                  EdgeInsetsDirectional.fromSTEB(0, 80, 8, 0),
+                              child: InkWell(
+                                onTap: () async {
+                                  Navigator.pop(context);
+                                },
+                                child: Text(
+                                  '<',
+                                  style: FlutterFlowTheme.of(context)
+                                      .bodyText1
+                                      .override(
+                                        fontFamily: 'PT Sans',
+                                        color: Color(0xFF868788),
+                                        fontSize: 35,
+                                      ),
+                                ),
+                              ),
+                            ),
+                          ),
+                          Padding(
+                            padding:
+                                EdgeInsetsDirectional.fromSTEB(0, 80, 0, 0),
+                            child: Text(
+                              'Add',
+                              style: FlutterFlowTheme.of(context)
+                                  .bodyText1
+                                  .override(
                                     fontFamily: 'PT Sans',
                                     color: Color(0xFF9A0509),
                                     fontSize: 27,
                                     fontWeight: FontWeight.w500,
                                   ),
-                        ),
+                            ),
+                          ),
+                        ],
                       ),
                       Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(32, 12, 32, 0),
@@ -85,7 +115,7 @@ class _AddInventoryWidgetState extends State<AddInventoryWidget> {
                           controller: textFieldStockController,
                           obscureText: false,
                           decoration: InputDecoration(
-                            hintText: 'Stock#: XXXX',
+                            hintText: 'Stock#: ',
                             hintStyle:
                                 FlutterFlowTheme.of(context).bodyText2.override(
                                       fontFamily: 'PT Sans',
@@ -122,7 +152,7 @@ class _AddInventoryWidgetState extends State<AddInventoryWidget> {
                           controller: textFieldVinController,
                           obscureText: false,
                           decoration: InputDecoration(
-                            hintText: 'Vin#: xxxxxxxxxxxxx',
+                            hintText: 'Vin#: ',
                             hintStyle:
                                 FlutterFlowTheme.of(context).bodyText2.override(
                                       fontFamily: 'PT Sans',
@@ -459,7 +489,12 @@ class _AddInventoryWidgetState extends State<AddInventoryWidget> {
                   ),
                 ),
               ),
-              BottomNavWidget(),
+              BottomNavWidget(
+                search: Colors.transparent,
+                queue: Colors.transparent,
+                add: Color(0xFFC60000),
+                profile: Colors.transparent,
+              ),
             ],
           ),
         ),

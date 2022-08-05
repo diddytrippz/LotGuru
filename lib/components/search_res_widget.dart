@@ -113,7 +113,12 @@ class _SearchResWidgetState extends State<SearchResWidget> {
               ),
             ],
           ),
-          BottomNavWidget(),
+          BottomNavWidget(
+            search: Color(0xFFC60000),
+            queue: FlutterFlowTheme.of(context).customTransp,
+            add: FlutterFlowTheme.of(context).customTransp,
+            profile: FlutterFlowTheme.of(context).customTransp,
+          ),
         ],
       ),
     );

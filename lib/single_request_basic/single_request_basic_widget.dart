@@ -193,7 +193,12 @@ class _SingleRequestBasicWidgetState extends State<SingleRequestBasicWidget> {
                   ),
                 ],
               ),
-              BottomNavWidget(),
+              BottomNavWidget(
+                search: Colors.transparent,
+                queue: Colors.transparent,
+                add: FlutterFlowTheme.of(context).customTransp,
+                profile: FlutterFlowTheme.of(context).customTransp,
+              ),
             ],
           ),
         ),

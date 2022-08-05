@@ -68,7 +68,7 @@ class _FirstDropConfirmationWidgetState
                   Padding(
                     padding: EdgeInsetsDirectional.fromSTEB(33, 0, 33, 20),
                     child: Text(
-                      'Location',
+                      widget.docToUpdate!.currentLoc!,
                       textAlign: TextAlign.center,
                       style: FlutterFlowTheme.of(context).bodyText1.override(
                             fontFamily: 'PT Sans',

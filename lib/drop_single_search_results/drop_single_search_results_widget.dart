@@ -124,7 +124,12 @@ class _DropSingleSearchResultsWidgetState
                   ),
                 ],
               ),
-              BottomNavWidget(),
+              BottomNavWidget(
+                search: Colors.transparent,
+                queue: Colors.transparent,
+                add: Colors.transparent,
+                profile: Colors.transparent,
+              ),
             ],
           ),
         ),

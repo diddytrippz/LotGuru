@@ -411,7 +411,12 @@ class _QueueFullWidgetState extends State<QueueFullWidget> {
                     ),
                   ],
                 ),
-                BottomNavWidget(),
+                BottomNavWidget(
+                  search: Colors.transparent,
+                  queue: Color(0xFFC60000),
+                  add: Colors.transparent,
+                  profile: Colors.transparent,
+                ),
               ],
             ),
           ),
