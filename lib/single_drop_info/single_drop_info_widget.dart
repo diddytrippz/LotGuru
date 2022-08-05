@@ -92,7 +92,7 @@ class _SingleDropInfoWidgetState extends State<SingleDropInfoWidget> {
                                 Expanded(
                                   child: Padding(
                                     padding: EdgeInsetsDirectional.fromSTEB(
-                                        20, 0, 0, 0),
+                                        10, 0, 10, 0),
                                     child: Column(
                                       mainAxisSize: MainAxisSize.max,
                                       crossAxisAlignment:

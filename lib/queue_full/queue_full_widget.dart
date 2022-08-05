@@ -165,8 +165,8 @@ class _QueueFullWidgetState extends State<QueueFullWidget> {
                                                     child: Padding(
                                                       padding:
                                                           EdgeInsetsDirectional
-                                                              .fromSTEB(
-                                                                  10, 18, 0, 0),
+                                                              .fromSTEB(10, 18,
+                                                                  10, 0),
                                                       child: Column(
                                                         mainAxisSize:
                                                             MainAxisSize.max,

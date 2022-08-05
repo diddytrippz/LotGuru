@@ -111,7 +111,7 @@ class _AdminNewUserWidgetState extends State<AdminNewUserWidget> {
                             alignment: AlignmentDirectional(0, 0),
                             child: Padding(
                               padding:
-                                  EdgeInsetsDirectional.fromSTEB(0, 120, 5, 0),
+                                  EdgeInsetsDirectional.fromSTEB(0, 120, 8, 0),
                               child: InkWell(
                                 onTap: () async {
                                   Navigator.pop(context);

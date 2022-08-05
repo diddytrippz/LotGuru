@@ -98,7 +98,7 @@ class _AdminRolesWidgetState extends State<AdminRolesWidget> {
                             alignment: AlignmentDirectional(0, 0),
                             child: Padding(
                               padding:
-                                  EdgeInsetsDirectional.fromSTEB(0, 120, 5, 30),
+                                  EdgeInsetsDirectional.fromSTEB(0, 120, 8, 30),
                               child: InkWell(
                                 onTap: () async {
                                   Navigator.pop(context);

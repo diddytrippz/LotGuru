@@ -97,7 +97,7 @@ class _AdminLocationsWidgetState extends State<AdminLocationsWidget> {
                             alignment: AlignmentDirectional(0, 0),
                             child: Padding(
                               padding:
-                                  EdgeInsetsDirectional.fromSTEB(0, 120, 5, 40),
+                                  EdgeInsetsDirectional.fromSTEB(0, 120, 8, 40),
                               child: InkWell(
                                 onTap: () async {
                                   Navigator.pop(context);

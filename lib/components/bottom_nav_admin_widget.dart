@@ -37,7 +37,7 @@ class _BottomNavAdminWidgetState extends State<BottomNavAdminWidget> {
           width: MediaQuery.of(context).size.width,
           height: 80,
           decoration: BoxDecoration(
-            color: Color(0xFF9A0509),
+            color: Color(0xFFFF0000),
             borderRadius: BorderRadius.only(
               bottomLeft: Radius.circular(0),
               bottomRight: Radius.circular(0),

@@ -116,7 +116,7 @@ class _AdminEditUsersWidgetState extends State<AdminEditUsersWidget> {
                             alignment: AlignmentDirectional(0, 0),
                             child: Padding(
                               padding:
-                                  EdgeInsetsDirectional.fromSTEB(0, 80, 5, 10),
+                                  EdgeInsetsDirectional.fromSTEB(0, 80, 8, 10),
                               child: InkWell(
                                 onTap: () async {
                                   Navigator.pop(context);

@@ -122,7 +122,7 @@ class _SingleDropMapWidgetState extends State<SingleDropMapWidget> {
                                   Expanded(
                                     child: Padding(
                                       padding: EdgeInsetsDirectional.fromSTEB(
-                                          20, 0, 0, 0),
+                                          10, 0, 10, 0),
                                       child: Column(
                                         mainAxisSize: MainAxisSize.max,
                                         crossAxisAlignment:

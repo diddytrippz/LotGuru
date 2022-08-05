@@ -81,17 +81,46 @@ class _AdminUsersWidgetState extends State<AdminUsersWidget> {
               Column(
                 mainAxisSize: MainAxisSize.max,
                 children: [
-                  Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(0, 120, 0, 40),
-                    child: Text(
-                      'Users',
-                      style: FlutterFlowTheme.of(context).bodyText1.override(
-                            fontFamily: 'PT Sans',
-                            color: Color(0xFF9A0509),
-                            fontSize: 30,
-                            fontWeight: FontWeight.w500,
+                  Row(
+                    mainAxisSize: MainAxisSize.max,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Align(
+                        alignment: AlignmentDirectional(0, 0),
+                        child: Padding(
+                          padding:
+                              EdgeInsetsDirectional.fromSTEB(0, 120, 8, 40),
+                          child: InkWell(
+                            onTap: () async {
+                              Navigator.pop(context);
+                            },
+                            child: Text(
+                              '<',
+                              style: FlutterFlowTheme.of(context)
+                                  .bodyText1
+                                  .override(
+                                    fontFamily: 'PT Sans',
+                                    color: Color(0xFF868788),
+                                    fontSize: 35,
+                                  ),
+                            ),
                           ),
-                    ),
+                        ),
+                      ),
+                      Padding(
+                        padding: EdgeInsetsDirectional.fromSTEB(0, 120, 0, 40),
+                        child: Text(
+                          'Users',
+                          style:
+                              FlutterFlowTheme.of(context).bodyText1.override(
+                                    fontFamily: 'PT Sans',
+                                    color: Color(0xFF9A0509),
+                                    fontSize: 30,
+                                    fontWeight: FontWeight.w500,
+                                  ),
+                        ),
+                      ),
+                    ],
                   ),
                   Expanded(
                     child: AuthUserStreamWidget(
